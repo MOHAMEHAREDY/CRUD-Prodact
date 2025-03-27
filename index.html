@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <title>CRUD-prodact</title>
+    <link rel="stylesheet" href="./bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Registration Form -->
+      <div id="register-section">
+        <h2>Register</h2>
+        <form id="register-form">
+          <input
+            type="text"
+            id="register-name"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            id="register-email"
+            placeholder="Email"
+            required
+          />
+          <input
+            type="password"
+            id="register-password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Register</button>
+          <p id="register-error" class="error"></p>
+        </form>
+        <p>
+          Already have an account? <a href="#" id="login-link">Login here</a>
+        </p>
+      </div>
+
+      <!-- Login Form -->
+      <div id="login-section" style="display: none">
+        <h2>Login</h2>
+        <form id="login-form">
+          <input type="email" id="login-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+          <button type="submit">Login</button>
+          <p id="login-error" class="error"></p>
+        </form>
+        <p>
+          Don't have an account?
+          <a href="#" id="register-link">Register here</a>
+        </p>
+      </div>
+
+      <!-- Home Page -->
+      <div id="home-section" style="display: none">
+        <h2>Welcome, <span id="user-name"></span>!</h2>
+        <button id="logout">Log Out</button>
+        <div id="home"></div>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
